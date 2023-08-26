@@ -1,12 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
+
+  --font-family: 'Poppins', sans-serif;
+
   line-height: 1.5;
   font-weight: 400;
-
+  /* stylelint-disable */
   color-scheme: light dark;
+  /* stylelint-enable */
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -16,6 +21,7 @@
 
 body {
   margin: 0;
+
   /* display: flex;
   place-items: center; */
   min-width: 320px;
@@ -27,15 +33,16 @@ h1 {
   line-height: 1.1;
 }
 
-
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: #fff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
