@@ -1,16 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Poppins:wght@400;500;600;700;800&display=swap');
 
 :root {
-  font-family: 'Inter', system-ui, sans-serif;
-
   --font-family: 'Poppins', sans-serif;
+  --Inter-font-family: 'Inter', system-ui, sans-serif;
+  --primary-green: #285430;
+  --primary-white: #fff;
+  --header-border-color: rgba(40, 84, 48, 0.20);
+  --card-background-color: #d9d9d9;
+  --hover-button-color: #e0ede2;
+  --enquiry-background-color: #f4ed93;
+  --enquiry-text-color: #706800;
+  --upper-footer-background-color: #364539;
+  --level-indicator-color: #92ba92;
 
   line-height: 1.5;
   font-weight: 400;
   /* stylelint-disable */
   color-scheme: light dark;
   /* stylelint-enable */
-  color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -21,9 +28,7 @@
 
 body {
   margin: 0;
-
-  /* display: flex;
-  place-items: center; */
+  font-family: var(--font-family);
   min-width: 320px;
   min-height: 100vh;
 }
@@ -31,6 +36,14 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+.active {
+  background-color: var(--primary-green);
+}
+
+.hide {
+  display: none;
 }
 
 @media (prefers-color-scheme: light) {
