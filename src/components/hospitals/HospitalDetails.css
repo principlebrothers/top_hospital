@@ -1,0 +1,141 @@
+.hospital__details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0;
+  min-height: 100vh;
+}
+
+.details__card {
+  display: flex;
+  justify-content: center;
+  margin: 0 7rem;
+}
+
+.details__card__image__container {
+  width: 659px;
+  margin: 0;
+  /* height: 488px; */
+}
+
+.details__card__image__container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.details__card__body {
+  max-width: 584px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 1rem 1rem 3rem;
+  gap: 1em;
+  background-color: #add3aa;
+}
+
+.details__card__body h3 {
+  font-size: 1.5rem;
+  color: var(--primary-green);
+  margin: 0;
+}
+
+.details__card__body p {
+  font-size: 1rem;
+  color: var(--primary-green);
+  margin: 0;
+}
+
+.details__card__body .book__appointment__button__container button {
+  max-width: 70%;
+  margin-top: 2rem;
+}
+
+.specialist__services {
+  display: grid;
+  column-gap: 2rem;
+  margin: 2rem 7rem 9rem;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+}
+
+.details__page__quick__nav__container {
+  position: relative;
+  top: -80px;
+  left: 30px;
+}
+
+.call__details__container {
+  margin: 0 7rem;
+  border: 1px solid var(--upper-footer-background-color);
+}
+
+.call__details__container h3 {
+  font-size: 20px;
+  color: var(--primary-white);
+  padding: 1rem;
+  margin: 0;
+  background-color: var(--upper-footer-background-color);
+}
+
+.call__details {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.call__details p {
+  font-size: 18px;
+  color: var(--primary-green);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.call__details p span:first-child {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  padding: 10px 14px;
+  background-color: var(--upper-footer-background-color);
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  color: var(--primary-white);
+}
+
+/* ================================ MEDIA QUERY BEGINS =============================== */
+
+@media (max-width: 1024px) {
+  .details__card {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 2rem;
+  }
+
+  .details__card__body {
+    padding: 1rem;
+  }
+
+  .details__card__image__container img {
+    width: 100%;
+  }
+
+  .details__card__image__container {
+    width: 100%;
+    margin: 0;
+  }
+
+  .specialist__services {
+    margin: 2rem 2rem 9rem;
+    grid-template-columns: 1fr;
+  }
+
+  .call__details__container {
+    margin: 0 2rem;
+  }
+
+  .call__details {
+    flex-direction: column;
+  }
+}
