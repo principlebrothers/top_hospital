@@ -5,6 +5,7 @@
   --Inter-font-family: 'Inter', system-ui, sans-serif;
   --primary-green: #285430;
   --primary-white: #fff;
+  /* stylelint-disable-next-line */
   --header-border-color: rgba(40, 84, 48, 0.20);
   --card-background-color: #d9d9d9;
   --hover-button-color: #e0ede2;
@@ -18,7 +19,6 @@
   /* stylelint-disable */
   color-scheme: light dark;
   /* stylelint-enable */
-  background-color: #242424;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
