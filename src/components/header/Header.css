@@ -1,0 +1,110 @@
+header {
+  background-color: var(--primary-green);
+  padding: 1rem 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site__logo {
+  text-decoration: none;
+  padding-left: 2rem;
+}
+
+.site__logo img {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0 -12px 30px, rgba(0, 0, 0, 0.12) 0 4px 6px, rgba(0, 0, 0, 0.17) 0 12px 13px, rgba(0, 0, 0, 0.09) 0 -3px 5px;
+  padding: 0.5rem;
+}
+
+.search__bar {
+  --size: 60px;
+
+  border: 2px solid var(--primary-white);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search__bar__input {
+  flex-grow: 1;
+  width: 599px;
+  font-size: 1.5rem;
+  padding: 0.6rem 2em;
+  border: 0;
+}
+
+.search__bar__input[placeholder] {
+  color: var(--primary-white);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.search__bar__submit {
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
+  border-radius: 50%;
+  width: var(--size);
+  height: var(--size);
+  position: absolute;
+  margin-top: 0.4rem;
+  left: 0;
+}
+
+.search__icon {
+  color: var(--primary-white);
+}
+
+.language__selector {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.language__selector__icon {
+  color: var(--primary-white);
+}
+
+.language__selector__select {
+  font-family: var(--font-family);
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  color: var(--primary-white);
+  font-size: 13.119px;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.menu__button {
+  border: none;
+  background-color: var(--primary-white);
+  border-radius: 5px;
+  margin-right: 1rem;
+  padding: 0.4rem;
+  color: var(--primary-green);
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* ======================================== Mobile ========================================= */
+
+@media (max-width: 1024px) {
+  header {
+    padding: 0;
+  }
+
+  .site__logo img {
+    width: 100px;
+  }
+
+  .search__bar {
+    display: none;
+  }
+
+  .language__selector {
+    display: none;
+  }
+}

@@ -1,0 +1,162 @@
+.hospitals__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 1.5rem;
+  grid-column-gap: 1.5rem;
+  margin: 0 7rem;
+}
+
+.hospital__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 394px;
+  border: 1px solid var(--header-border-color);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.hospital__card__image {
+  width: 370px;
+  height: 254px;
+}
+
+.hospital__card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hospital__card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 370px;
+}
+
+.hospital__card__body a {
+  text-decoration: none;
+}
+
+.hospital__card__body h3 {
+  color: #000;
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hospital__card__body h3:hover {
+  transform: translateY(-3px);
+}
+
+.hospital__card__body h3:active {
+  color: var(--primary-green);
+}
+
+.book__appointment__button__container {
+  width: 100%;
+}
+
+.book__appointment__button__container button {
+  border: none;
+  background-color: var(--primary-green);
+  color: var(--primary-white);
+  width: 100%;
+  padding: 0.7rem 1rem;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  transform: perspective(1px) translateZ(0);
+}
+
+.book__appointment__button__container button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(20, 120, 255);
+  clip-path: polygon(50% 0, 50% 0, 50% 50%, 50% 100%, 50% 100%, 50% 50%);
+  opacity: 1;
+  transition: 0.4s;
+}
+
+.book__appointment__button__container button.gradient:hover {
+  color: white;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.6);
+  transform: translateY(-5px);
+}
+
+.book__appointment__button__container button:hover::before {
+  clip-path: polygon(25% -70%, 75% -70%, 120% 50%, 75% 170%, 25% 170%, -20% 50%);
+}
+
+.loader__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.view__all__button {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1.5rem 5rem 3rem 0;
+}
+
+.view__all__button button {
+  color: var(--primary-green);
+  text-decoration: underline;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-style: italic;
+}
+
+.book__appointment__button__container button:hover {
+  color: white;
+  box-shadow: 0 0 0 10px rgba(250, 250, 250, 0.1);
+}
+
+/* ========================================== MEDIA QUERY BEGINS =============================================== */
+
+@media (max-width: 1024px) {
+  .hospitals__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
+    margin: 0;
+    padding: 2rem;
+  }
+
+  .hospitals h2 {
+    color: var(--primary-green);
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .hospital__card {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .hospital__card__image {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+  .hospital__card__body {
+    width: 100%;
+    margin: 0;
+  }
+}

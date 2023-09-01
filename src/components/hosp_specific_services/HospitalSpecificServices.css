@@ -1,0 +1,31 @@
+.services__only__container {
+  max-width: 500px;
+  margin: 0;
+  margin-left: 7rem;
+}
+
+.services__only__container h3 {
+  font-size: 1.25rem;
+  color: var(--primary-green);
+  border-radius: 15px;
+  padding: 10px 14px;
+  background-color: var(--header-border-color);
+  margin: 0;
+}
+
+.services__only__container ul {
+  margin: 0;
+  padding: 0;
+}
+
+.services__only__container ul li {
+  list-style-type: none;
+}
+
+/* ================================ MEDIA QUERY BEGINS =============================== */
+
+@media (max-width: 1024px) {
+  .services__only__container {
+    margin-left: 0;
+  }
+}
