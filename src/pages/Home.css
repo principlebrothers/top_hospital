@@ -49,15 +49,12 @@
   object-fit: cover;
 }
 
-
-
 /* ========== SERVICES ================== */
 .services {
   display: flex;
   flex-direction: column;
   margin: 0 7rem;
 }
-
 
 /* ========== RECOMMENDED HOSPITALS ============= */
 .hospitals h2 {
