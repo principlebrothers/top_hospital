@@ -1,12 +1,11 @@
 .estimate__form {
   color: var(--primary-green);
   background-color: transparent;
-  padding-left: 0;
   margin-left: 2rem;
   display: grid;
   column-gap: 0.5rem;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  padding: 2rem 0;
+  padding: 2rem 0 2rem 0;
 }
 
 .estimate__form__input {

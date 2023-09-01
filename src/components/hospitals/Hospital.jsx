@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useGetTopHospitalsQuery } from '../../components/api/apiSlice';
 import { Dna } from 'react-loader-spinner';
@@ -6,7 +6,7 @@ import { Dna } from 'react-loader-spinner';
 import './Hospitals.css';
 
 const Hospital = () => {
-  const { data = [], isFetching, isLoading } = useGetTopHospitalsQuery();
+  const { data = [], isFetching } = useGetTopHospitalsQuery();
   const [limit, setLimit] = useState(6);
   const [clicked, setClicked] = useState(false);
 

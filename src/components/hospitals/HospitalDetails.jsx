@@ -1,5 +1,3 @@
-import React, { useEffect } from 'react';
-import detailPageImage from '../../assets/detailPageImage.png';
 import Doctors from '../doctors/Doctors';
 import HospitalSpecificServices from '../hosp_specific_services/HospitalSpecificServices';
 import Gallary from '../hosp_specific_services/Gallary';
@@ -14,7 +12,7 @@ import QuickNavigation from '../quick_navigation/QuickNavigation';
 
 const HospitalDetails = () => {
   const { id } = useParams();
-  const { data = [], isFetching } = useGetHospitalInfoQuery(id);
+  const { data = [] } = useGetHospitalInfoQuery(id);
 
   const { hospital, info } = data;
   const image = hospital?.image_url; // Facility image

@@ -22,11 +22,6 @@ nav div:hover {
   transition: background-color 0.3s ease-in-out;
 }
 
-nav div:hover a {
-  color: white;
-  transition: color 0.3s ease-in-out;
-}
-
 nav a {
   font-size: 1rem;
   font-weight: 400;
@@ -34,11 +29,16 @@ nav a {
   text-decoration: none;
 }
 
+nav div:hover a {
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+
 .phone__icon {
   font-size: 1rem;
 }
 
-/* ========================================== MEDIA QUERY BEGINS ===============================================*/
+/* ========================================== MEDIA QUERY BEGINS =============================================== */
 
 @media screen and (max-width: 1024px) {
   nav {
@@ -56,11 +56,11 @@ nav a {
     background-color: transparent;
   }
 
-  nav div:hover a {
+  nav a {
     color: var(--primary-green);
   }
 
-  nav a {
+  nav div:hover a {
     color: var(--primary-green);
   }
 

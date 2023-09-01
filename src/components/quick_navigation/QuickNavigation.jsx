@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaBriefcaseMedical } from 'react-icons/fa';
 import { IoIosAirplane } from 'react-icons/io';
 import { LiaBusinessTimeSolid } from 'react-icons/lia';

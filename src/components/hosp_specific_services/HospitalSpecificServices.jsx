@@ -1,10 +1,10 @@
-import React from 'react';
 import { useGetHospitalServicesQuery } from '../api/apiSlice';
+import PropTypes from 'prop-types';
 
 import './HospitalSpecificServices.css';
 
 const HospitalSpecificServices = ({ id }) => {
-  const { data = [], isFetching } = useGetHospitalServicesQuery(id);
+  const { data = [] } = useGetHospitalServicesQuery(id);
   const hospitalServices = data?.services;
 
   return (
@@ -28,6 +28,10 @@ const HospitalSpecificServices = ({ id }) => {
       </ul>
     </article>
   );
+};
+
+HospitalSpecificServices.propTypes = {
+  id: PropTypes.string.isRequired
 };
 
 export default HospitalSpecificServices;

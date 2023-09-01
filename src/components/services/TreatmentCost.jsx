@@ -1,5 +1,3 @@
-import React from 'react'
-
 import './TreatmentCost.css';
 
 const TreatmentCost = () => {

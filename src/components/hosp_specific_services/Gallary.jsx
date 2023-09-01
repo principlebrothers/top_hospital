@@ -1,5 +1,5 @@
-import React from 'react';
 import { Dna } from 'react-loader-spinner';
+import PropTypes from 'prop-types';
 
 import { useGetHospitalGalleryQuery } from '../api/apiSlice';
 
@@ -41,5 +41,9 @@ const Gallary = ({ id }) => {
     </article>
   );
 }
+
+Gallary.propTypes = {
+  id: PropTypes.string.isRequired,
+};
 
 export default Gallary

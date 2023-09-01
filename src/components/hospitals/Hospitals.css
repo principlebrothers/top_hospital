@@ -15,7 +15,7 @@
   border: 1px solid var(--header-border-color);
   border-radius: 10px;
   padding: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
   transition: box-shadow 0.3s ease-in-out;
 }
 
@@ -41,7 +41,7 @@
   text-decoration: none;
 }
 
-.hospital__card__body h3{
+.hospital__card__body h3 {
   color: #000;
   font-size: 24px;
   font-weight: 500;
@@ -75,32 +75,27 @@
 }
 
 .book__appointment__button__container button::before {
-	content: "";
-	position: absolute;
-	z-index: -1;
-	top: 0px;
-	left: 0px;
-	right: 0px;
-	bottom: 0;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: rgb(20, 120, 255);
-	clip-path: polygon(50% 0, 50% 0, 50% 50%, 50% 100%, 50% 100%, 50% 50%);
-	opacity: 1;
-	transition: 0.4s;
+  clip-path: polygon(50% 0, 50% 0, 50% 50%, 50% 100%, 50% 100%, 50% 50%);
+  opacity: 1;
+  transition: 0.4s;
 }
 
 .book__appointment__button__container button.gradient:hover {
-	color: white;
-	box-shadow: 0 5px 35px rgba(0, 0, 0, 0.6);
-	transform: translateY(-5px);
+  color: white;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.6);
+  transform: translateY(-5px);
 }
 
 .book__appointment__button__container button:hover::before {
-	clip-path: polygon(25% -70%, 75% -70%, 120% 50%, 75% 170%, 25% 170%, -20% 50%);
-}
-
-.book__appointment__button__container button:hover {
-	color: white;
-	box-shadow: 0 0 0 10px rgba(250, 250, 250, 0.1)
+  clip-path: polygon(25% -70%, 75% -70%, 120% 50%, 75% 170%, 25% 170%, -20% 50%);
 }
 
 .loader__container {
@@ -115,7 +110,7 @@
   margin: 1.5rem 5rem 3rem 0;
 }
 
-.view__all__button button{
+.view__all__button button {
   color: var(--primary-green);
   text-decoration: underline;
   font-size: 24px;
@@ -125,7 +120,12 @@
   font-style: italic;
 }
 
-/* ========================================== MEDIA QUERY BEGINS ===============================================*/
+.book__appointment__button__container button:hover {
+  color: white;
+  box-shadow: 0 0 0 10px rgba(250, 250, 250, 0.1);
+}
+
+/* ========================================== MEDIA QUERY BEGINS =============================================== */
 
 @media (max-width: 1024px) {
   .hospitals__container {

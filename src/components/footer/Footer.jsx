@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import { BiSolidPhone } from 'react-icons/bi';
 import { MdEmail } from 'react-icons/md';

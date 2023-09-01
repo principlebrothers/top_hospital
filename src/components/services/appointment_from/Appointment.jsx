@@ -1,14 +1,15 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { useGetAllSpecialtiesQuery } from '../../api/apiSlice';
 import { useCreateAppointmentMutation } from '../../api/apiSlice';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import PropTypes from 'prop-types';
 
 import './Appointment.css';
 
 const Appointment = ({ handleCloseModal, modalRef }) => {
-  const { data = [], isFetching } = useGetAllSpecialtiesQuery();
-  const [createAppointment, isLoading] = useCreateAppointmentMutation()
+  const { data = [] } = useGetAllSpecialtiesQuery();
+  const [createAppointment] = useCreateAppointmentMutation()
 
 
   const form = useRef()
@@ -25,7 +26,7 @@ const Appointment = ({ handleCloseModal, modalRef }) => {
 
     const response = await createAppointment(formValues)
       .unwrap()
-      .catch((error) =>
+      .catch(() =>
         toast.error('Something went wrong, please try again later!')
     )
     console.log(response)
@@ -63,39 +64,32 @@ const Appointment = ({ handleCloseModal, modalRef }) => {
                 </div>
                 <div className='appointment__form__input'>
                   <label htmlFor='doctor'>
-                    Doctor's name (if you have any preference)
+                    Doctor&lsquo;s name (if you have any preference)
                   </label>
                   <input type='text' name='doctors' id='doctor' />
                 </div>
                 <div className='appointment__form__input'>
                   <label htmlFor='date'>Preferred appointment date*</label>
-                  <input type='date' name='end_time' id='date' required/>
+                  <input type='date' name='end_time' id='date' required />
                 </div>
                 <div className='appointment__form__input'>
                   <label htmlFor='time'>Preferred time*</label>
-                  <input type='time' name='start_time' id='time' required/>
+                  <input type='time' name='start_time' id='time' required />
                 </div>
                 <div className='appointment__form__input'>
                   <label htmlFor='request'>
                     State your medical concern or request*
                   </label>
-                  <input type='text' name='description' id='request' required/>
+                  <input type='text' name='description' id='request' required />
                 </div>
                 <div className='appointment__form__input'>
                   <label htmlFor='hospital_number'>
                     Preferred Hospital(if applicable)
                   </label>
-                  <input
-                    type='text'
-                    name='hospital_id'
-                    id='hospital_number'
-                  />
+                  <input type='text' name='hospital_id' id='hospital_number' />
                 </div>
               </div>
-              <button
-                type='submit'
-                className='general__button'
-              >
+              <button type='submit' className='general__button'>
                 {'Created'}
               </button>
             </form>
@@ -136,6 +130,11 @@ const Appointment = ({ handleCloseModal, modalRef }) => {
       <ToastContainer />
     </>
   );
+};
+
+Appointment.propTypes = {
+  handleCloseModal: PropTypes.func.isRequired,
+  modalRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
 };
 
 export default Appointment;

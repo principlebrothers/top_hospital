@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom';
 import { BsSearch } from 'react-icons/bs';
 import { RiTranslate2 } from 'react-icons/ri';

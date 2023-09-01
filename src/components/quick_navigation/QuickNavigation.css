@@ -5,7 +5,7 @@
   width: 258px;
   border-radius: 10px;
   border: 1px solid var(--header-border-color);
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
   margin: 0 0 10px 20px;
   padding: 0 0 1rem 1rem;
   position: absolute;
@@ -17,6 +17,7 @@
   display: flex;
   justify-content: space-between;
 }
+
 .quick__nav__header h3 {
   color: #000;
   font-size: 14px;

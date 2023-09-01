@@ -1,5 +1,5 @@
-import React from 'react'
 import { HiArrowSmRight } from 'react-icons/hi';
+import PropTypes from 'prop-types';
 
 const BookAppointment = ({ handleOpenModal }) => {
   return (
@@ -41,5 +41,10 @@ const BookAppointment = ({ handleOpenModal }) => {
     </>
   );
 }
+
+BookAppointment.propTypes = {
+  handleOpenModal: PropTypes.func.isRequired,
+  
+};
 
 export default BookAppointment

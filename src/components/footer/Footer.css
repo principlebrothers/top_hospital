@@ -3,7 +3,8 @@ footer {
   flex-direction: column;
 }
 
-.upper__footer, .lower__footer {
+.upper__footer,
+.lower__footer {
   display: grid;
   place-items: center;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

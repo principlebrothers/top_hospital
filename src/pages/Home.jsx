@@ -1,4 +1,3 @@
-import React from 'react';
 import { homeSlider } from '../utils/Utils';
 import Hospital from '../components/hospitals/Hospital';
 import Services from '../components/services/Services';

@@ -18,6 +18,7 @@ hr {
 
 .gallary__image__container {
   width: 158px;
+
   /* height: 147px; */
   margin: 0;
 }
@@ -33,7 +34,6 @@ hr {
   .gallary__container {
     margin-right: 13rem;
   }
-
 }
 
 @media (max-width: 1024px) {
@@ -42,5 +42,3 @@ hr {
     column-gap: 0;
   }
 }
-
-

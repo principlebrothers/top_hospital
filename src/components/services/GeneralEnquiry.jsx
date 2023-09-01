@@ -1,8 +1,6 @@
-import React from 'react'
-
 const GeneralEnquiry = () => {
   return (
-    <>GeneralEnquiry</>
+    <>Page under review</>
   )
 }
 
