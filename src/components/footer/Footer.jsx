@@ -1,13 +1,13 @@
-import { Link } from 'react-router-dom'
 import { BiSolidPhone } from 'react-icons/bi';
-import { MdEmail } from 'react-icons/md';
-import { MdLocationOn } from 'react-icons/md';
-import { CiFacebook } from 'react-icons/ci';
-import { BsInstagram } from 'react-icons/bs';
-import { TiSocialTwitterCircular } from 'react-icons/ti';
-import { FiYoutube } from 'react-icons/fi';
-import { ImPinterest2 } from 'react-icons/im';
-import { TiSocialLinkedinCircular } from 'react-icons/ti';
+// import { Link } from 'react-router-dom'
+// import { MdEmail } from 'react-icons/md';
+// import { MdLocationOn } from 'react-icons/md';
+// import { CiFacebook } from 'react-icons/ci';
+// import { BsInstagram } from 'react-icons/bs';
+// import { TiSocialTwitterCircular } from 'react-icons/ti';
+// import { FiYoutube } from 'react-icons/fi';
+// import { ImPinterest2 } from 'react-icons/im';
+// import { TiSocialLinkedinCircular } from 'react-icons/ti';
 
 import './Footer.css';
 

@@ -3,33 +3,33 @@ import './Error.css'
 const Error = () => {
   return (
     <>
-      <section class='page-wrapper'>
-        <div class='circles-layer'>
-          <div class='circle -white'></div>
-          <div class='circle -red'></div>
-          <div class='circle -white'></div>
-          <div class='circle -red'></div>
+      <section className='page-wrapper'>
+        <div className='circles-layer'>
+          <div className='circle -white'></div>
+          <div className='circle -red'></div>
+          <div className='circle -white'></div>
+          <div className='circle -red'></div>
         </div>
-        <div class='numbers-layer'>
-          <div class='number'>4</div>
-          <div class='number'>4</div>
-          <div class='number'>4</div>
-          <div class='number'>4</div>
-          <div class='number'>4</div>
-          <div class='number'>4</div>
-          <div class='number'>4</div>
-          <div class='number'>4</div>
-          <div class='number -with-shadow'>0</div>
-          <div class='number -with-shadow'>0</div>
-          <div class='number -with-shadow'>0</div>
-          <div class='number -with-shadow'>0</div>
+        <div className='numbers-layer'>
+          <div className='number'>4</div>
+          <div className='number'>4</div>
+          <div className='number'>4</div>
+          <div className='number'>4</div>
+          <div className='number'>4</div>
+          <div className='number'>4</div>
+          <div className='number'>4</div>
+          <div className='number'>4</div>
+          <div className='number -with-shadow'>0</div>
+          <div className='number -with-shadow'>0</div>
+          <div className='number -with-shadow'>0</div>
+          <div className='number -with-shadow'>0</div>
         </div>
-        <div class='oops-message'>
-          <div class='test'>Unknown URL</div>
+        <div className='oops-message'>
+          <div className='test'>Unknown URL</div>
           <div>
-            <span class='test'>Invalid Route/Link</span>
+            <span className='test'>Invalid Route/Link</span>
           </div>
-          <a class='button' href='/'>
+          <a className='button' href='/'>
             Go to Home Page
           </a>
         </div>

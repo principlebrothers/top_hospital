@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import docAvatar from '../../assets/docAvatar.jpeg';
 import { useGetHospitalServicesQuery } from '../api/apiSlice';
 import Appointment from '../services/appointment_from/Appointment';
+import PropTypes from 'prop-types';
 
 
 import './Doctors.css';
@@ -77,6 +78,10 @@ const Doctors = ({ id }) => {
       <Appointment modalRef={modalRef} handleCloseModal={handleCloseModal} />
     </article>
   );
+};
+
+Doctors.propTypes = {
+  id: PropTypes.string.isRequired,
 };
 
 export default Doctors;

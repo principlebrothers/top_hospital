@@ -1,5 +1,3 @@
-import React from 'react'
-
 import './Packages.css'
 
 const Packages = () => {

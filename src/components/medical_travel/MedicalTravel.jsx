@@ -1,5 +1,3 @@
-import React from 'react'
-
 import './MedicalTravel.css'
 const MedicalTravel = () => {
   return (
