@@ -1,0 +1,12 @@
+.packages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.packages p {
+  font-size: 2rem;
+  color: var(--primary-green);
+  font-weight: 700;
+}

@@ -12,8 +12,11 @@ header {
 }
 
 .site__logo img {
-  box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0 -12px 30px, rgba(0, 0, 0, 0.12) 0 4px 6px, rgba(0, 0, 0, 0.17) 0 12px 13px, rgba(0, 0, 0, 0.09) 0 -3px 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0 -12px 30px,
+    rgba(0, 0, 0, 0.12) 0 4px 6px, rgba(0, 0, 0, 0.17) 0 12px 13px,
+    rgba(0, 0, 0, 0.09) 0 -3px 5px;
   padding: 0.5rem;
+  width: 70%;
 }
 
 .search__bar {
@@ -55,25 +58,25 @@ header {
   color: var(--primary-white);
 }
 
-.language__selector {
+.amtc__logo {
+  margin: 0;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  margin-right: 1rem;
+  gap: 0.1rem;
+  flex-direction: column;
 }
 
-.language__selector__icon {
-  color: var(--primary-white);
+.amtc__logo img {
+  object-fit: cover;
+  width: 45%;
+  border-radius: 10px;
 }
 
-.language__selector__select {
-  font-family: var(--font-family);
-  background-color: transparent;
-  border: 0;
-  outline: 0;
+.amtc__logo figcaption {
   color: var(--primary-white);
-  font-size: 13.119px;
-  cursor: pointer;
-  margin-right: 1rem;
+  font-size: 10px;
+  text-align: center;
 }
 
 .menu__button {
@@ -101,6 +104,10 @@ header {
   }
 
   .search__bar {
+    display: none;
+  }
+
+  .amtc__logo {
     display: none;
   }
 

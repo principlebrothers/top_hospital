@@ -22,9 +22,11 @@ const SubHeader = () => {
         <Link to='/contact'>Contact Us</Link>
       </div>
       <div role='group'>
-        <Link to=''>
+        <Link to='tel: +233308040040'>
           <MdOutlineSpeakerPhone className='phone__icon' />
-          <span>+233-308-040-040</span>
+          <span>
+            <a>+233-308-040-040</a>
+          </span>
         </Link>
       </div>
     </nav>

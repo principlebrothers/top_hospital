@@ -1,0 +1,12 @@
+.medical__travel__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.medical__travel__container p {
+  color: var(--primary-green);
+  font-size: 2rem;
+  font-weight: 700;
+}

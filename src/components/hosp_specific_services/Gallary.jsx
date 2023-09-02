@@ -11,7 +11,7 @@ const Gallary = ({ id }) => {
   return (
     <article className='gallary__container'>
       <div className='gallary__headers'>
-        <h3>Our Gallary</h3>
+        <h3>Our Gallery</h3>
         <p>View all</p>
       </div>
       <hr />

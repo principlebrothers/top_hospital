@@ -17,11 +17,11 @@ const Footer = () => {
       <div className='upper__footer'>
         <div className='contact__details'>
           <BiSolidPhone className='phone__icon upper__footer__icon' />
-          <p>contact Top Hospitals</p>
-          <p>+234 803 123 4567</p>
+          <p>Contact Top Hospitals</p>
+          <p>+233-308-040-040</p>
           <p>Available 24 hours everyday</p>
         </div>
-        <div className='news__letter'>
+        {/* <div className='news__letter'>
           <MdEmail className='email__icon upper__footer__icon' />
           <p>Subscribe to our newsletter</p>
           <button type='button' className='news__letter__button'>
@@ -34,9 +34,9 @@ const Footer = () => {
           <button type='button' className='direction__button'>
             Get Directions
           </button>
-        </div>
+        </div> */}
       </div>
-      <div className='lower__footer'>
+      {/* <div className='lower__footer'>
         <div className='footer__services'>
           <Link to='/services' className='services__link'>
             Services
@@ -60,7 +60,7 @@ const Footer = () => {
           <FiYoutube className='youtube__icon' />
           <BsInstagram className='instagram__icon' />
         </div>
-      </div>
+      </div> */}
     </footer>
   );
 }

@@ -1,12 +1,26 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { specialists } from '../../utils/Utils';
+import docAvatar from '../../assets/docAvatar.jpeg';
+import { useGetHospitalServicesQuery } from '../api/apiSlice';
+import Appointment from '../services/appointment_from/Appointment';
+
 
 import './Doctors.css';
 
-const Doctors = () => {
-  const [limit, setLimit] = useState(3);
+const Doctors = ({ id }) => {
+  const modalRef = useRef(null);
+  const { data = [] } = useGetHospitalServicesQuery(id);
+  const specialists = data?.services;
+  const [limit, setLimit] = useState(6);
   const [clicked, setClicked] = useState(false);
+
+  const handleOpenModal = () => {
+    if (modalRef.current) modalRef.current.showModal();
+  };
+
+  const handleCloseModal = () => {
+    if (modalRef.current) modalRef.current.close();
+  };
 
   const handleViewAll = () => {
     setClicked(true);
@@ -15,7 +29,7 @@ const Doctors = () => {
 
   const handleViewLess = () => {
     setClicked(false);
-    setLimit(3);
+    setLimit(6);
   };
 
   return (
@@ -23,17 +37,18 @@ const Doctors = () => {
       <h3>Doctor/Specialist</h3>
       <div className='specialist__cards__container'>
         {specialists?.slice(0, limit)?.map((item) => {
-          const { id, image, name, info } = item;
+          const { id, name } = item;
           return (
             <div key={id} className='specialist__card'>
               <figure className='specialist__image__container'>
-                <img src={image} alt={name} />
+                <img src={docAvatar} alt={name} />
               </figure>
               <div className='specialist__card__body'>
                 <h4>{name}</h4>
-                <p>{info}</p>
                 <div className='buttom__container'>
-                  <Link to={`/doctors/${id}`}>View profile</Link>
+                  <Link to='' onClick={handleOpenModal}>
+                    Book Appointment
+                  </Link>
                 </div>
               </div>
             </div>
@@ -59,6 +74,7 @@ const Doctors = () => {
           </button>
         )}
       </div>
+      <Appointment modalRef={modalRef} handleCloseModal={handleCloseModal} />
     </article>
   );
 };

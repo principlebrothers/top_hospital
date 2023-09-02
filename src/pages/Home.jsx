@@ -10,6 +10,7 @@ import './Home.css';
 import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
 
 const Home = () => {
+
   return (
     <section className='home__container'>
       <div className='card__main'>
@@ -30,6 +31,11 @@ const Home = () => {
                   <div className='card__body'>
                     <h2>{title}</h2>
                     <p>{info}</p>
+                    <button type='button' className='call__us__btn'>
+                      <a href='tel: +233308040040'>
+                        <span>Call +233308040040</span>
+                      </a>
+                    </button>
                   </div>
                   <figure className='card__image'>
                     <img src={image} alt={title} />

@@ -18,6 +18,9 @@ export const topHospitalsApi = createApi({
     getAllSpecialties: builder.query({
       query: () => `specialties`,
     }),
+    getServices: builder.query({
+      query: () => `services`,
+    }),
     getHospitalServices: builder.query({
       query: (id) => `services/${id}`,
     }),
@@ -27,7 +30,21 @@ export const topHospitalsApi = createApi({
         method: 'POST',
         body
       })
-    })
+    }),
+    createEnquiry: builder.mutation({
+      query: (body) => ({
+        url: 'enquiries',
+        method: 'POST',
+        body
+      })
+    }),
+    requestTreatmentCost: builder.mutation({
+      query: (body) => ({
+        url: 'treatment_costs',
+        method: 'POST',
+        body
+      })
+    }),
   }),
 });
 
@@ -38,4 +55,7 @@ export const {
   useGetAllSpecialtiesQuery,
   useGetHospitalServicesQuery,
   useCreateAppointmentMutation,
+  useGetServicesQuery,
+  useCreateEnquiryMutation,
+  useRequestTreatmentCostMutation,
 } = topHospitalsApi;

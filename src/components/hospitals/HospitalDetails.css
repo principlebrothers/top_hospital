@@ -85,7 +85,7 @@
   gap: 2rem;
 }
 
-.call__details p {
+.call__details a {
   font-size: 18px;
   color: var(--primary-green);
   margin: 0;
@@ -94,7 +94,7 @@
   padding: 0 1rem;
 }
 
-.call__details p span:first-child {
+.call__details a span:first-child {
   width: 58px;
   height: 58px;
   border-radius: 50%;
