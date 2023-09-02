@@ -62,8 +62,7 @@ figcaption span {
 
 @media (max-width: 500px) {
   figcaption {
-  font-weight: 700;
-  font-size: 14px;
-}
-
+    font-weight: 700;
+    font-size: 14px;
+  }
 }

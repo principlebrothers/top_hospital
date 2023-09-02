@@ -60,9 +60,8 @@ nav#mobile__nav a {
   color: red;
   border: 1px solid red;
   background-color: var(--primary-white);
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
 }
-
 
 @media (min-width: 530px) {
   .amtc__logo__mobile {
