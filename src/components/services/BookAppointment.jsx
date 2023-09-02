@@ -33,10 +33,6 @@ const BookAppointment = ({ handleOpenModal }) => {
           <span className='position__number second_place'>2</span>
           <span>Appointment Details</span>
         </p>
-        <p>
-          <span className='position__number third_place'>3</span>
-          <span>Patient Details</span>
-        </p>
       </div>
     </>
   );
@@ -44,7 +40,7 @@ const BookAppointment = ({ handleOpenModal }) => {
 
 BookAppointment.propTypes = {
   handleOpenModal: PropTypes.func.isRequired,
-  
+
 };
 
 export default BookAppointment

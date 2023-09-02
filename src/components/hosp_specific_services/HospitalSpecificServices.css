@@ -19,6 +19,7 @@
 }
 
 .services__only__container ul li {
+  color: var(--primary-green);
   list-style-type: none;
 }
 

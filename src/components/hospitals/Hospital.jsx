@@ -1,11 +1,13 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useGetTopHospitalsQuery } from '../../components/api/apiSlice';
 import { Dna } from 'react-loader-spinner';
+import Appointment from '../services/appointment_from/Appointment';
 
 import './Hospitals.css';
 
 const Hospital = () => {
+  const modalRef = useRef(null);
   const { data = [], isFetching } = useGetTopHospitalsQuery();
   const [limit, setLimit] = useState(6);
   const [clicked, setClicked] = useState(false);
@@ -20,6 +22,14 @@ const Hospital = () => {
   const handleReset = () => {
     setClicked(false);
     setLimit(6);
+  };
+
+  const handleOpenModal = () => {
+    if (modalRef.current) modalRef.current.showModal();
+  };
+
+  const handleCloseModal = () => {
+    if (modalRef.current) modalRef.current.close();
   };
 
   return (
@@ -48,14 +58,14 @@ const Hospital = () => {
                 aria-label='hospital card'
               >
                 <figure className='hospital__card__image'>
-                  <img src={image_url} alt={name} />
+                  <Link to={`/hospital/${id}`}><img src={image_url} alt={name} /></Link>
                 </figure>
                 <div className='hospital__card__body'>
                   <Link to={`/hospital/${id}`}>
                     <h3>{name}</h3>
                   </Link>
                   <div className='book__appointment__button__container'>
-                    <button type='button'>Book Appointment</button>
+                    <button type='button' onClick={ handleOpenModal }>Book Appointment</button>
                   </div>
                 </div>
               </article>
@@ -74,6 +84,7 @@ const Hospital = () => {
           </button>
         )}
       </div>
+      <Appointment modalRef={modalRef} handleCloseModal={handleCloseModal} />
     </>
   );
 };

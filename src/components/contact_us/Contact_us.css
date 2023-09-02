@@ -1,0 +1,12 @@
+.contact__us {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.contact__us p {
+  color: var(--primary-green);
+  font-size: 2rem;
+  font-weight: 700;
+}

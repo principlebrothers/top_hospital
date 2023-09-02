@@ -1,145 +1,50 @@
 import homePictures from '../assets/homePictures.png';
-import DrGeorge from '../assets/Dr_George.png';
+import britannia from '../assets/britannia.jpeg';
+import abt_img from '../assets/abt_img.jpg';
 
 export const homeSlider = [
   {
     id: 1,
     title: 'Find the best Top Hospitals in Ghana.',
-    info: 'With a comprehensive approach to quality healthcare and improvement top hospitals Ghana is number one. Lorem ipsum dolor sit amet consectetur. Parturient condimentum augue pellentesque massa. Duis ipsum auctor semper donec euismod dolor. Elit tellus tellus tincidunt varius. Nunc cursus id aliquam iaculis sed molestie in praesent quis.',
+    info: "The top hospitals in Ghana strive to deliver top-notch medical care with a holistic approach to quality healthcare and improvement. Ghana's healthcare system includes providers at different levels, including health posts, clinics, district hospitals, regional hospitals, and tertiary hospitals. Top hospitals in Ghana are examples of excellent healthcare, providing a combination of top-notch facilities, knowledgeable medical professionals, and a commitment to providing unmatched patient-centric services. These facilities enable Africans to take greater control over their health and well-being than ever before because they serve as tangible examples of what can be accomplished when technology and human compassion work together.",
     image: homePictures,
   },
   {
     id: 2,
     title: 'Find the best Top Hospitals in Ghana.',
-    info: 'With a comprehensive approach to quality healthcare and improvement top hospitals Ghana is number one. Lorem ipsum dolor sit amet consectetur. Parturient condimentum augue pellentesque massa. Duis ipsum auctor semper donec euismod dolor. Elit tellus tellus tincidunt varius. Nunc cursus id aliquam iaculis sed molestie in praesent quis.',
-    image: homePictures,
+    info: 'With a comprehensive approach to quality healthcare and improvement, the top hospitals in Ghana strive to provide excellent medical services. The healthcare system in Ghana consists of various levels of providers, including health posts, health centres and clinics, district hospitals, regional hospitals, and tertiary hospitals.',
+    image: britannia,
   },
   {
     id: 3,
     title: 'Find the best Top Hospitals in Ghana.',
-    info: 'With a comprehensive approach to quality healthcare and improvement top hospitals Ghana is number one. Lorem ipsum dolor sit amet consectetur. Parturient condimentum augue pellentesque massa. Duis ipsum auctor semper donec euismod dolor. Elit tellus tellus tincidunt varius. Nunc cursus id aliquam iaculis sed molestie in praesent quis.',
-    image: homePictures,
+    info: "The top hospitals in Ghana strive to deliver top-notch medical care with a holistic approach to quality healthcare and improvement. Ghana's healthcare system includes providers at different levels, including health posts, clinics, district hospitals, regional hospitals, and tertiary hospitals. Top hospitals in Ghana are examples of excellent healthcare, providing a combination of top-notch facilities, knowledgeable medical professionals, and a commitment to providing unmatched patient-centric services. These facilities enable Africans to take greater control over their health and well-being than ever before because they serve as tangible examples of what can be accomplished when technology and human compassion work together.",
+    image: abt_img,
   },
   {
     id: 4,
     title: 'Find the best Top Hospitals in Ghana.',
-    info: 'With a comprehensive approach to quality healthcare and improvement top hospitals Ghana is number one. Lorem ipsum dolor sit amet consectetur. Parturient condimentum augue pellentesque massa. Duis ipsum auctor semper donec euismod dolor. Elit tellus tellus tincidunt varius. Nunc cursus id aliquam iaculis sed molestie in praesent quis.',
+    info: "The top hospitals in Ghana strive to deliver top-notch medical care with a holistic approach to quality healthcare and improvement. Ghana's healthcare system includes providers at different levels, including health posts, clinics, district hospitals, regional hospitals, and tertiary hospitals. Top hospitals in Ghana are examples of excellent healthcare, providing a combination of top-notch facilities, knowledgeable medical professionals, and a commitment to providing unmatched patient-centric services. These facilities enable Africans to take greater control over their health and well-being than ever before because they serve as tangible examples of what can be accomplished when technology and human compassion work together.",
     image: homePictures,
   },
 ];
 
-export const hospitals = [
+export const gender = [
   {
-    id: 1,
-    image: homePictures,
-    hospital_name: 'Britannia Medical Center',
+    id: 'Male',
+    gender: 'Male'
   },
   {
-    id: 2,
-    image: homePictures,
-    hospital_name: 'Britannia Medical Center',
+    id: 'Female',
+    gender: 'Female'
   },
   {
-    id: 3,
-    image: homePictures,
-    hospital_name: 'Britannia Medical Center',
+    id: 'Transgender',
+    gender: 'Transgender'
   },
   {
-    id: 4,
-    image: homePictures,
-    hospital_name: 'Britannia Medical Center',
-  },
-  {
-    id: 5,
-    image: homePictures,
-    hospital_name: 'Britannia Medical Center',
-  },
-  {
-    id: 6,
-    image: homePictures,
-    hospital_name: 'Britannia Medical Center',
-  },
+    id: 'Prefer not to say',
+    gender: 'Prefer not to say'
+  }
 ];
 
-export const specialists = [
-  {
-    id: 1,
-    image: DrGeorge,
-    name: 'Dr. George Doe',
-    info: 'Lorem ipsum dolor sit amet consectetur. Parturient condimentum augue pellentesque massa.',
-  },
-  {
-    id: 2,
-    image: DrGeorge,
-    name: 'Dr. George Doe',
-    info: 'Lorem ipsum dolor sit amet consectetur. Parturient condimentum augue pellentesque massa.',
-  },
-  {
-    id: 3,
-    image: DrGeorge,
-    name: 'Dr. George Doe',
-    info: 'Lorem ipsum dolor sit amet consectetur. Parturient condimentum augue pellentesque massa.',
-  },
-  {
-    id: 4,
-    image: DrGeorge,
-    name: 'Dr. George Doe',
-    info: 'Lorem ipsum dolor sit amet consectetur. Parturient condimentum augue pellentesque massa.',
-  },
-  {
-    id: 5,
-    image: DrGeorge,
-    name: 'Dr. George Doe',
-    info: 'Lorem ipsum dolor sit amet consectetur. Parturient condimentum augue pellentesque massa.',
-  }
-]
-
-export const hospitalServices = [
-  {
-    id: 1,
-    service_name: 'General Surgery'
-  },
-  {
-    id: 2,
-    service_name: 'Gynaecology'
-  },
-  {
-    id: 3,
-    service_name: 'Paediatrics'
-  },
-  {
-    id: 4,
-    service_name: 'Bone Surgery'
-  },
-  {
-    id: 5,
-    service_name: 'Heart Surgery'
-  }
-]
-
-export const gallary = [
-  {
-    id: 1,
-    image: homePictures
-  },
-  {
-    id: 2,
-    image: homePictures
-  },
-  {
-    id: 3,
-    image: DrGeorge
-  },
-  {
-    id: 4,
-    image: homePictures
-  },
-  {
-    id: 5,
-    image: homePictures
-  },
-  {
-    id: 6,
-    image: DrGeorge
-  }
-]

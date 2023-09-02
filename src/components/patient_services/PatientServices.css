@@ -1,0 +1,12 @@
+.patient__services {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.patient__services p {
+  color: var(--primary-green);
+  font-size: 2rem;
+  font-weight: 700;
+}

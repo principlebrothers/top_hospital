@@ -8,9 +8,9 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
   margin: 0 0 10px 20px;
   padding: 0 0 1rem 1rem;
-  position: absolute;
-  bottom: -4rem;
-  z-index: 1;
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
 }
 
 .quick__nav__header {
@@ -45,6 +45,7 @@
   border: none;
   border: 1px solid var(--header-border-color);
   color: var(--primary-green);
+  background-color: var(--primary-white);
   font-size: 14px;
   padding: 0.5rem;
   text-align: justify;
@@ -59,4 +60,8 @@
 
 .quick__navigation__button:hover {
   background-color: var(--hover-button-color);
+}
+
+.quick__navigation a {
+  color: var(--primary-green);
 }

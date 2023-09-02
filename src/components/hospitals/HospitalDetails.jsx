@@ -1,22 +1,33 @@
+import { useRef } from 'react';
 import Doctors from '../doctors/Doctors';
 import HospitalSpecificServices from '../hosp_specific_services/HospitalSpecificServices';
 import Gallary from '../hosp_specific_services/Gallary';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { BiSolidPhoneCall } from 'react-icons/bi';
 import { TbMessage2Share, TbCalendarTime } from 'react-icons/tb';
+
 
 import { useGetHospitalInfoQuery } from '../api/apiSlice';
 
 import './HospitalDetails.css';
 import QuickNavigation from '../quick_navigation/QuickNavigation';
+import Appointment from '../services/appointment_from/Appointment';
 
 const HospitalDetails = () => {
+  const modalRef = useRef(null);
   const { id } = useParams();
   const { data = [] } = useGetHospitalInfoQuery(id);
 
   const { hospital, info } = data;
   const image = hospital?.image_url; // Facility image
 
+    const handleOpenModal = () => {
+      if (modalRef.current) modalRef.current.showModal();
+    };
+
+    const handleCloseModal = () => {
+      if (modalRef.current) modalRef.current.close();
+    };
 
   return (
     <section className='hospital__details'>
@@ -26,21 +37,19 @@ const HospitalDetails = () => {
         </figure>
         <div className='details__card__body'>
           <h3>About Us</h3>
-          <p>
-            {info}
-          </p>
+          <p>{info}</p>
           <div className='book__appointment__button__container'>
-            <button type='button' className=''>
+            <button type='button' className='' onClick={handleOpenModal}>
               Book Appointment
             </button>
           </div>
         </div>
       </div>
       <article className='specialist__services'>
-        <Doctors />
+        <Doctors id={id} />
         <div className='services__container' role='group'>
           <HospitalSpecificServices id={id} />
-          <Gallary id={ id } />
+          <Gallary id={id} />
         </div>
       </article>
       <article className='quick__nav__and__call__details'>
@@ -50,27 +59,28 @@ const HospitalDetails = () => {
         <div className='call__details__container'>
           <h3>Call Britannia Medical</h3>
           <div className='call__details'>
-            <p>
+            <Link to='tel: +233308040040'>
               <span>
                 <BiSolidPhoneCall />
               </span>
-              <span>Call For Appointment</span>
-            </p>
-            <p>
+              <span>Reach Out To Us</span>
+            </Link>
+            <Link to='mailto: info@britanniamedical.org'>
               <span>
                 <TbMessage2Share />
               </span>
               <span>Send An Enquiry </span>
-            </p>
-            <p>
+            </Link>
+            <Link onClick={handleOpenModal}>
               <span>
                 <TbCalendarTime />
               </span>
               <span>Book Appointment</span>
-            </p>
+            </Link>
           </div>
         </div>
       </article>
+      <Appointment modalRef={modalRef} handleCloseModal={handleCloseModal} />
     </section>
   );
 };

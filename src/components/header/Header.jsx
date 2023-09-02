@@ -1,14 +1,24 @@
+import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { BsSearch } from 'react-icons/bs';
-import { RiTranslate2 } from 'react-icons/ri';
 import { ImMenu } from 'react-icons/im';
 import { useMediaQuery } from '@mui/material';
 import Logo from '../../assets/Logo.png';
-
 import './Header.css';
+import MobileMenu from '../mobile_menu/MobileMenu';
+import amtcLogo from '../../assets/amtcLogo.png';
 
 const Header = () => {
-  const isWideScreen = useMediaQuery('(min-width: 1025px)')
+  const modalRef = useRef(null);
+  const isWideScreen = useMediaQuery('(min-width: 1025px)');
+
+  const handleOpenModal = () => {
+    if (modalRef.current) modalRef.current.showModal();
+  };
+
+  const handleCloseModal = () => {
+    if (modalRef.current) modalRef.current.close();
+  };
 
   return (
     <header>
@@ -26,23 +36,24 @@ const Header = () => {
           <BsSearch className='search__icon' />
         </button>
       </form>
-      <form className='language__selector'>
-        <RiTranslate2 className='language__selector__icon' />
-        <select className='language__selector__select'>
-          <option value='en'>English</option>
-          <option value='fr'>Français</option>
-          <option value='es'>Español</option>
-        </select>
-      </form>
+      <figure className='amtc__logo'>
+        <img src={amtcLogo} alt='amtc' />
+        <figcaption>Powered by Africa Medical Tourism Council</figcaption>
+      </figure>
       <>
         {isWideScreen ? null : (
-          <button type='button' className='menu__button'>
+          <button
+            type='button'
+            className='menu__button'
+            onClick={handleOpenModal}
+          >
             <ImMenu className='menu__icon' />
           </button>
         )}
       </>
+      <MobileMenu modalRef={modalRef} handleCloseModal={handleCloseModal} />
     </header>
   );
-}
+};
 
-export default Header
+export default Header;
