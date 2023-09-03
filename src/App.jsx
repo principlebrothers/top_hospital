@@ -8,6 +8,11 @@ import Packages from './components/packages/Packages';
 import PatientServices from './components/patient_services/PatientServices';
 import MedicalTravel from './components/medical_travel/MedicalTravel';
 import Layout from './components/layout/Layout';
+import MedicalService from './components/medical_services/MedicalService';
+import PreTravelSevices from './components/pre_travel_services/PreTravelSevices';
+import PostTreatmentServices from './components/post_treatment_services/PostTreatmentServices';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Error from './pages/404/Error';
 
 function App() {
@@ -22,9 +27,16 @@ function App() {
           <Route path='packages' element={<Packages />} />
           <Route path='patient-services' element={<PatientServices />} />
           <Route path='medical-travel' element={<MedicalTravel />} />
+          <Route path='medical-services' element={<MedicalService />} />
+          <Route path='pre-travel-services' element={<PreTravelSevices />} />
+          <Route
+            path='post-treatment-services'
+            element={<PostTreatmentServices />}
+          />
         </Route>
-          <Route path='*' element={<Error />} />
+        <Route path='*' element={<Error />} />
       </Routes>
+      <ToastContainer />
     </>
   );
 }

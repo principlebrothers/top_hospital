@@ -5,7 +5,7 @@ const BookAppointment = ({ handleOpenModal }) => {
   return (
     <>
       <div className='services__info__left'>
-        <h3>Top Hospital In-person appointment Request</h3>
+        <h3>In-person appointment Request</h3>
         <div className='appointment_type'>
           <p>Which type of appointment are you interested in?</p>
           <div className='services__info__form'>

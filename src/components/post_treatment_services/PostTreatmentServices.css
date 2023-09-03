@@ -1,0 +1,11 @@
+.post__treatment__container {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.post__treatment__container h1 {
+  color: var(--primary-green);
+  font-size: 2rem;
+  font-weight: 700;
+}

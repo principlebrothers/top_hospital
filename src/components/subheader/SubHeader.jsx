@@ -25,7 +25,7 @@ const SubHeader = () => {
         <Link to='tel: +233308040040'>
           <MdOutlineSpeakerPhone className='phone__icon' />
           <span>
-            <a>+233-308-040-040</a>
+            +233-308-040-040
           </span>
         </Link>
       </div>

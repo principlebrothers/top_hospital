@@ -97,12 +97,6 @@ label {
   transition: all 0.3s ease-in-out;
 }
 
-.continue__btn {
-  border: none;
-  background-color: var(--primary-green);
-  color: var(--primary-white);
-}
-
 .service__level__button:hover {
   transform: translateY(-6px);
   background-color: var(--primary-green);

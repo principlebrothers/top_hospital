@@ -122,10 +122,6 @@ const TreatmentCost = () => {
           <span className='position__number first_place'>1</span>
           <span>Cost Estimate Details</span>
         </p>
-        {/* <p>
-          <span className='position__number third_place'>2</span>
-          <span>Patient Details</span>
-        </p> */}
       </div>
     </>
   );

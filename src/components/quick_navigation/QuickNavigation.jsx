@@ -48,19 +48,19 @@ const QuickNavigation = () => {
           <div className='quick__navigation__buttons'>
             <button type='button' className='quick__navigation__button'>
               <FaBriefcaseMedical />
-              <Link to={`/patient-services`}>
+              <Link to={`/medical-services`}>
                 <span>Medical Services</span>
               </Link>
             </button>
             <button type='button' className='quick__navigation__button'>
               <IoIosAirplane />
-              <Link to={`/medical-travel`}>
+              <Link to={`/pre-travel-services`}>
                 <span>Pre-travel services</span>
               </Link>
             </button>
             <button type='button' className='quick__navigation__button'>
               <LiaBusinessTimeSolid />
-              <Link to={`/packages`}>
+              <Link to={`/post-treatment-services`}>
                 <span>Post Treatment services</span>
               </Link>
             </button>
