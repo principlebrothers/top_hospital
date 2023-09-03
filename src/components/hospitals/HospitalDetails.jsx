@@ -6,14 +6,13 @@ import { useParams, Link } from 'react-router-dom';
 import { BiSolidPhoneCall } from 'react-icons/bi';
 import { TbMessage2Share, TbCalendarTime } from 'react-icons/tb';
 
-
 import { useGetHospitalInfoQuery } from '../api/apiSlice';
 
 import './HospitalDetails.css';
 import QuickNavigation from '../quick_navigation/QuickNavigation';
-import Appointment from '../services/appointment_from/Appointment';
+import MainAppointment from '../main_appointment_form/MainAppointment';
 
-const HospitalDetails = () => {
+function HospitalDetails() {
   const modalRef = useRef(null);
   const { id } = useParams();
   const { data = [] } = useGetHospitalInfoQuery(id);
@@ -21,13 +20,13 @@ const HospitalDetails = () => {
   const { hospital, info } = data;
   const image = hospital?.image_url; // Facility image
 
-    const handleOpenModal = () => {
-      if (modalRef.current) modalRef.current.showModal();
-    };
+  const handleOpenModal = () => {
+    if (modalRef.current) modalRef.current.showModal();
+  };
 
-    const handleCloseModal = () => {
-      if (modalRef.current) modalRef.current.close();
-    };
+  const handleCloseModal = () => {
+    if (modalRef.current) modalRef.current.close();
+  };
 
   return (
     <section className='hospital__details'>
@@ -57,13 +56,13 @@ const HospitalDetails = () => {
           <QuickNavigation />
         </div>
         <div className='call__details__container'>
-          <h3>Call Britannia Medical</h3>
+          <h3>Reach Out To Us</h3>
           <div className='call__details'>
             <Link to='tel: +233308040040'>
               <span>
                 <BiSolidPhoneCall />
               </span>
-              <span>Reach Out To Us</span>
+              <span>Call For Appointment</span>
             </Link>
             <Link to='mailto: info@britanniamedical.org'>
               <span>
@@ -80,9 +79,9 @@ const HospitalDetails = () => {
           </div>
         </div>
       </article>
-      <Appointment modalRef={modalRef} handleCloseModal={handleCloseModal} />
+      <MainAppointment handleCloseModal={handleCloseModal} modalRef={modalRef} />
     </section>
   );
-};
+}
 
 export default HospitalDetails;

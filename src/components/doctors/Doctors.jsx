@@ -2,7 +2,7 @@ import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import docAvatar from '../../assets/docAvatar.jpeg';
 import { useGetHospitalServicesQuery } from '../api/apiSlice';
-import Appointment from '../services/appointment_from/Appointment';
+import MainAppointment from '../main_appointment_form/MainAppointment';
 import PropTypes from 'prop-types';
 
 
@@ -75,7 +75,7 @@ const Doctors = ({ id }) => {
           </button>
         )}
       </div>
-      <Appointment modalRef={modalRef} handleCloseModal={handleCloseModal} />
+      <MainAppointment handleCloseModal={handleCloseModal} modalRef={modalRef} />
     </article>
   );
 };
