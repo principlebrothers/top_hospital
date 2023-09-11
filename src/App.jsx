@@ -11,7 +11,7 @@ import MedicalService from './components/medical_services/MedicalService';
 import PreTravelSevices from './components/pre_travel_services/PreTravelSevices';
 import PostTreatmentServices from './components/post_treatment_services/PostTreatmentServices';
 import QuickNavigate from './pages/quick_navigation_pages/QuickNavigate';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Error from './pages/404/Error';
 

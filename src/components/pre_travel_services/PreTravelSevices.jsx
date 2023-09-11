@@ -45,7 +45,7 @@ const PreTravelSevices = () => {
                 <button type='button' className='book__service__btn'>
                   <a
                     href={`https://wa.me/233550641351?text=Hello, I would like to request an airport transfer to a top hospital in Ghana. Kindly get in touch with me.`}
-                    target='_blank'
+                    target='_blank' rel="noreferrer"
                   >
                     {button_info}
                   </a>
@@ -56,7 +56,7 @@ const PreTravelSevices = () => {
                 <button type='button' className='book__service__btn'>
                   <a
                     href={`https://wa.me/233550641351?text=Hello, I would like to make a hotel booking in Ghana. Kindly get in touch with me.`}
-                    target='_blank'
+                    target='_blank' rel="noreferrer"
                   >
                     {button_info}
                   </a>

@@ -1,5 +1,4 @@
-import { useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { useRef } from 'react';
 import { useGetHospitalServicesQuery } from '../api/apiSlice';
 import MainAppointment from '../main_appointment_form/MainAppointment';
 import PropTypes from 'prop-types';

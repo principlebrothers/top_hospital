@@ -18,7 +18,7 @@ function PostTreatmentServices() {
             <p>{description}</p>
             <div className='book__service__btn__container'>
               <button type='button' className='book__service__btn'>
-                <a href={help_link} target='_blank'> {button_info}</a>
+                <a href={help_link} target='_blank' rel="noreferrer"> {button_info}</a>
               </button>
             </div>
           </div>

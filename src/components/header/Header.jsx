@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { BsSearch } from 'react-icons/bs';
+// import { BsSearch } from 'react-icons/bs';
 import { ImMenu } from 'react-icons/im';
 import { useMediaQuery } from '@mui/material';
 import Logo from '../../assets/Logo.png';

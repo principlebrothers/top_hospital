@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef} from 'react';
 import { toast } from 'react-toastify';
 import PropTypes from 'prop-types';
 import './QuickNavForm.css';
@@ -44,7 +44,7 @@ const QuickNavForm = ({ handleCloseModal, modalRef, formName }) => {
         form.current.reset();
       }
     } else if (formName === 'visa-assistance') {
-      response = await requestVisaAssistance({ request_visa: formValues })
+      let response = await requestVisaAssistance({ request_visa: formValues })
         .unwrap()
         .catch((error) =>
           toast.error(
@@ -56,7 +56,7 @@ const QuickNavForm = ({ handleCloseModal, modalRef, formName }) => {
         form.current.reset();
       }
     } else {
-      response = await requestSecondOpinion({ second_opinion: formValues })
+      let response = await requestSecondOpinion({ second_opinion: formValues })
         .unwrap()
         .catch((error) =>
           toast.error(
@@ -260,6 +260,7 @@ const QuickNavForm = ({ handleCloseModal, modalRef, formName }) => {
 QuickNavForm.propTypes = {
   handleCloseModal: PropTypes.func.isRequired,
   modalRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  formName: PropTypes.string.isRequired,
 };
 
 export default QuickNavForm;
