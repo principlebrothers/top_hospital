@@ -1,5 +1,4 @@
 import { useRef } from 'react';
-import Doctors from '../doctors/Doctors';
 import HospitalSpecificServices from '../hosp_specific_services/HospitalSpecificServices';
 import Gallary from '../hosp_specific_services/Gallary';
 import { useParams, Link } from 'react-router-dom';
@@ -45,7 +44,6 @@ function HospitalDetails() {
         </div>
       </div>
       <article className='specialist__services'>
-        <Doctors id={id} />
         <div className='services__container' role='group'>
           <HospitalSpecificServices id={id} />
           <Gallary id={id} />

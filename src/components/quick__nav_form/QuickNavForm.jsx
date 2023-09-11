@@ -9,11 +9,13 @@ import {
   useGetServicesQuery,
   useCreateAppointmentMutation,
   useRequestSecondOpinionMutation,
+  useRequestVisaAssistanceMutation,
 } from '../api/apiSlice';
 
 const QuickNavForm = ({ handleCloseModal, modalRef, formName }) => {
   const [createAppointment] = useCreateAppointmentMutation();
   const [requestSecondOpinion] = useRequestSecondOpinionMutation();
+  const [requestVisaAssistance] = useRequestVisaAssistanceMutation();
   const { data: services = [] } = useGetServicesQuery();
   const { data = [] } = useGetTopHospitalsQuery();
   const form = useRef();
@@ -31,26 +33,41 @@ const QuickNavForm = ({ handleCloseModal, modalRef, formName }) => {
     }
 
     if (formName === 'in-person') {
-      const response = await createAppointment({ appointment: formValues })
+      let response = await createAppointment({ appointment: formValues })
         .unwrap()
         .catch(() =>
           toast.error('Something went wrong, please try again later!')
         );
+
       if (response) {
         toast.success('Appointment created successfully!');
         form.current.reset();
       }
-    }
+    } else if (formName === 'visa-assistance') {
+      response = await requestVisaAssistance({ request_visa: formValues })
+        .unwrap()
+        .catch((error) =>
+          toast.error(
+            `Something went wrong. ERROR: ${error.data.error}. Please try again later!`
+          )
+        );
+      if (response.data) {
+        toast.success('Visa assistance request submitted successfully!');
+        form.current.reset();
+      }
+    } else {
+      response = await requestSecondOpinion({ second_opinion: formValues })
+        .unwrap()
+        .catch((error) =>
+          toast.error(
+            `Something went wrong. ERROR: ${error.data.error}. Please try again later!`
+          )
+        );
 
-    response = await requestSecondOpinion({ second_opinion: formValues })
-      .unwrap()
-      .catch((error) =>
-        toast.error(`Something went wrong. ERROR: ${error.data.error}. Please try again later!`)
-      );
-
-    if (response.data) {
-      toast.success('Treatment cost request submitted successfully!');
-      form.current.reset();
+      if (response.data) {
+        toast.success('Treatment cost request submitted successfully!');
+        form.current.reset();
+      }
     }
   };
 
@@ -60,6 +77,10 @@ const QuickNavForm = ({ handleCloseModal, modalRef, formName }) => {
         <div className='services__info__left'>
           {formName === 'in-person' ? (
             <h3>In-person Consultation Form</h3>
+          ) : formName === 'visa-assistance' ? (
+            <h3>Request Visa Assistance Form</h3>
+          ) : formName === 'hotel-booking' ? (
+            <h3>Hotel Booking Assistance Form</h3>
           ) : (
             <h3>Second Medical Opinion Form</h3>
           )}
@@ -68,6 +89,10 @@ const QuickNavForm = ({ handleCloseModal, modalRef, formName }) => {
               Kindly fill the form below to{' '}
               {formName === 'in-person'
                 ? 'book in-person appointment with'
+                : formName === 'visa-assistance'
+                ? 'help recieve visa-application assistance'
+                : formName === 'hotel-booking'
+                ? 'so we can help you book a hotel room in Ghana to meet'
                 : 'get a second opinion from'}{' '}
               your preferred top hospital or specialist.
             </p>
@@ -103,19 +128,6 @@ const QuickNavForm = ({ handleCloseModal, modalRef, formName }) => {
               <div className='estimate__form__input'>
                 <label htmlFor='country'>Nationality*</label>
                 <input type='text' name='nationality' id='country' required />
-              </div>
-              <div className='estimate__form__input'>
-                <label htmlFor='speciality'>Speciality*</label>
-                <select name='speciality_id' id='speciality'>
-                  {services?.map((item) => {
-                    const { id, name } = item;
-                    return (
-                      <option key={id} value={id}>
-                        {name}
-                      </option>
-                    );
-                  })}
-                </select>
               </div>
               <div className='estimate__form__input'>
                 <label htmlFor='gender'>Gender*</label>
@@ -170,6 +182,41 @@ const QuickNavForm = ({ handleCloseModal, modalRef, formName }) => {
                     <label htmlFor='date'>Date of Birth*</label>
                     <input type='date' name='dob' id='date' required />
                   </div>
+                  <div className='estimate__form__input'>
+                    <label htmlFor='speciality'>Speciality*</label>
+                    <select name='speciality_id' id='speciality'>
+                      {services?.map((item) => {
+                        const { id, name } = item;
+                        return (
+                          <option key={id} value={id}>
+                            {name}
+                          </option>
+                        );
+                      })}
+                    </select>
+                  </div>
+                </>
+              ) : formName === 'visa-assistance' ? (
+                <>
+                  <div className='estimate__form__input'>
+                    <label htmlFor='location'>Current Location*</label>
+                    <input
+                      type='text'
+                      name='location'
+                      id='location'
+                      placeholder='Kempinski Hotel(Accra), Ghana'
+                      required
+                    />
+                  </div>
+                  <div className='estimate__form__input'>
+                    <label htmlFor='travel_month'>Month of Travel*</label>
+                    <input
+                      type='month'
+                      name='travel_month'
+                      id='travel_month'
+                      required
+                    />
+                  </div>
                 </>
               ) : (
                 <>
@@ -194,7 +241,6 @@ const QuickNavForm = ({ handleCloseModal, modalRef, formName }) => {
                   name='description'
                   id='description'
                   placeholder='Write details of the chosen service here'
-                  required
                 ></textarea>
               </div>
               <div className='grouped__form__buttons'>

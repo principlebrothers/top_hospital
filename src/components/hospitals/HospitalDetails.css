@@ -15,8 +15,6 @@
 .details__card__image__container {
   width: 659px;
   margin: 0;
-
-  /* height: 488px; */
 }
 
 .details__card__image__container img {
@@ -52,12 +50,12 @@
   margin-top: 2rem;
 }
 
-.specialist__services {
+/* .specialist__services {
   display: grid;
   column-gap: 2rem;
   margin: 2rem 7rem 9rem;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-}
+} */
 
 .details__page__quick__nav__container {
   position: relative;
@@ -127,10 +125,10 @@
     margin: 0;
   }
 
-  .specialist__services {
+  /* .specialist__services {
     margin: 2rem 2rem 9rem;
     grid-template-columns: 1fr;
-  }
+  } */
 
   .call__details__container {
     margin: 0 2rem;

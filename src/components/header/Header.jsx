@@ -25,7 +25,7 @@ const Header = () => {
       <Link className='site__logo' to='/'>
         <img src={Logo} alt='logo' />
       </Link>
-      <form className='search__bar'>
+      {/* <form className='search__bar'>
         <input
           type='text'
           placeholder='Search for anything'
@@ -35,7 +35,7 @@ const Header = () => {
         <button type='submit' className='search__bar__submit '>
           <BsSearch className='search__icon' />
         </button>
-      </form>
+      </form> */}
       <figure className='amtc__logo'>
         <img src={amtcLogo} alt='amtc' />
         <figcaption>Powered by Africa Medical Tourism Council</figcaption>

@@ -19,7 +19,7 @@ const Footer = () => {
           <BiSolidPhone className='phone__icon upper__footer__icon' />
           <p>Contact Top Hospitals</p>
           <p>+233-308-040-040</p>
-          <p>Available 24 hours everyday</p>
+          <p>info@britanniamedical.org</p>
         </div>
         {/* <div className='news__letter'>
           <MdEmail className='email__icon upper__footer__icon' />

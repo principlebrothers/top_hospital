@@ -1,0 +1,37 @@
+.quick__navs {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 7rem;
+}
+
+.quick__navs a {
+  font-size: 1.1rem;
+  padding-block: 0.5rem;
+  color: var(--enquiry-text-color);
+  font-weight: 600;
+  transition: all 0.4s ease-in-out;
+}
+
+.quick__navs a:hover {
+  text-decoration: overline;
+  color: var(--primary-green);
+}
+
+@media (max-width: 768px) {
+  .quick__navs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    margin: 0;
+  }
+
+  .quick__navs a {
+    font-size: 0.7rem;
+    padding-block: 0.5rem;
+    color: var(--enquiry-text-color);
+    font-weight: 600;
+    transition: all 0.4s ease-in-out;
+  }
+}
