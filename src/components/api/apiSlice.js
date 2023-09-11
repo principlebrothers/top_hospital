@@ -52,6 +52,13 @@ export const topHospitalsApi = createApi({
         body
       })
     }),
+    requestVisaAssistance: builder.mutation({
+      query: (body) => ({
+        url: 'visa_assistances',
+        method: 'POST',
+        body
+      })
+    }),
   }),
 });
 
@@ -66,4 +73,5 @@ export const {
   useCreateEnquiryMutation,
   useRequestTreatmentCostMutation,
   useRequestSecondOpinionMutation,
+  useRequestVisaAssistanceMutation
 } = topHospitalsApi;
