@@ -7,6 +7,7 @@ dialog.mobile__modal {
 
 nav#mobile__nav {
   min-height: 100vh;
+
   /* width: 270px; */
   display: flex;
   flex-direction: column;
@@ -17,18 +18,11 @@ nav#mobile__nav div {
   padding: 0.8rem;
 }
 
-nav#mobile__nav a {
-  font-size: 20px;
-  text-decoration: none;
-  color: var(--primary-white);
-}
-
 .mobile__btn__links__container button {
   font-size: 20px;
   background-color: transparent;
   border: none;
   color: var(--primary-white);
-
 }
 
 .mobile__btn__links__container a {
@@ -40,6 +34,12 @@ nav#mobile__nav a {
 .mobile__btn__links__container a:active {
   color: #000 !important;
   background-color: var(--primary-white);
+}
+
+nav#mobile__nav a {
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--primary-white);
 }
 
 .amtc__logo__mobile {

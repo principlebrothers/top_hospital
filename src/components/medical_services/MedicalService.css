@@ -35,7 +35,7 @@
   font-size: 2rem;
 }
 
-.medical__services__card  p {
+.medical__services__card p {
   color: var(--primary-green);
 }
 
@@ -57,7 +57,6 @@
 .book__service__btn > * {
   color: var(--primary-green);
 }
-
 
 @media (max-width: 620px) {
   .medical__services__container {
