@@ -1,3 +1,8 @@
+.gallary__container {
+  margin: 0;
+  margin-inline: 7rem;
+}
+
 .gallary__headers {
   display: flex;
   justify-content: space-between;
@@ -40,5 +45,11 @@ hr {
   .gallary__images {
     margin: 1rem 0 3rem 0;
     column-gap: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallary__container {
+    margin: 2rem;
   }
 }

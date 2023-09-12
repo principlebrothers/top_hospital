@@ -1,0 +1,23 @@
+.grouped__form__buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+.grouped__form__buttons > * {
+  border: 1px solid var(--primary-white);
+  padding: 10px 24px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+  transition: all 0.4s ease-in-out;
+}
+
+.grouped__form__buttons > *:hover {
+  transform: scale(0.9);
+}
+
+.grouped__form__buttons button:last-child {
+  background-color: var(--primary-green);
+  color: var(--primary-white);
+}

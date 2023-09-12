@@ -1,9 +1,8 @@
 import { useRef } from 'react';
 import { useCreateAppointmentMutation, useGetTopHospitalsQuery, useGetServicesQuery } from '../../api/apiSlice';
-import { ToastContainer, toast } from 'react-toastify';
 import { gender } from '../../../utils/Utils';
-import 'react-toastify/dist/ReactToastify.css';
 import PropTypes from 'prop-types';
+import { toast } from 'react-toastify';
 
 import './Appointment.css';
 
@@ -31,7 +30,6 @@ const Appointment = ({ handleCloseModal, modalRef }) => {
         toast.error('Something went wrong, please try again later!')
       );
       if (response) {
-      console.log(response);
       toast.success('Appointment created successfully!');
       form.current.reset();
     }
@@ -42,7 +40,7 @@ const Appointment = ({ handleCloseModal, modalRef }) => {
       <dialog ref={modalRef} className='modal'>
         <div className='modal__content'>
           <article className='appointment__form'>
-            <h3>Top Hospital In-person appointment Request</h3>
+            <h3>In-person appointment Request</h3>
             <p className='instruction__paragraph'>
               Kindly fill the form below to submit an in-person consultation
               request at Top Hospitals
@@ -187,17 +185,11 @@ const Appointment = ({ handleCloseModal, modalRef }) => {
               >
                 <span>Back</span>
               </button>
-              {/* <button
-                type='button'
-                className='service__level__button continue__btn'
-              >
-                <span>Continue</span>
-              </button> */}
             </div>
           </article>
         </div>
       </dialog>
-      <ToastContainer />
+      {/* <ToastContainer /> */}
     </>
   );
 };

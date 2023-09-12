@@ -1,0 +1,71 @@
+.medical__services__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1rem;
+  background-color: var(--card-background-color);
+  min-height: 100vh;
+  padding: 1rem;
+  margin: 0 7rem;
+}
+
+.medical__services__card {
+  background-color: var(--primary-white);
+  padding: 0 1rem 1rem 1rem;
+  max-height: 350px;
+}
+
+.medical__services__container__header {
+  color: var(--primary-green);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border: 1px solid var(--primary-green);
+  border-radius: 50%;
+}
+
+.icon__container > * {
+  font-size: 2rem;
+}
+
+.medical__services__card p {
+  color: var(--primary-green);
+}
+
+.book__service__btn__container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.book__service__btn {
+  padding: 10px 44px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--primary-green);
+  color: var(--primary-green);
+  background-color: var(--primary-white);
+}
+
+.book__service__btn > * {
+  color: var(--primary-green);
+}
+
+@media (max-width: 620px) {
+  .medical__services__container {
+    margin: 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .medical__services__container {
+    padding: 0.3rem;
+  }
+}

@@ -1,12 +1,14 @@
 dialog.mobile__modal {
-  border: 1px solid var(--primary-white);
+  /* border: 1px solid var(--primary-white); */
   background-color: var(--primary-green);
-  max-width: 500px;
+  width: 570px;
+  top: 110px;
 }
 
 nav#mobile__nav {
   min-height: 100vh;
-  min-width: 90vw;
+
+  /* width: 270px; */
   display: flex;
   flex-direction: column;
   position: relative;
@@ -14,6 +16,24 @@ nav#mobile__nav {
 
 nav#mobile__nav div {
   padding: 0.8rem;
+}
+
+.mobile__btn__links__container button {
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+  color: var(--primary-white);
+}
+
+.mobile__btn__links__container a {
+  display: flex;
+  flex-direction: column;
+  line-height: 2;
+}
+
+.mobile__btn__links__container a:active {
+  color: #000 !important;
+  background-color: var(--primary-white);
 }
 
 nav#mobile__nav a {

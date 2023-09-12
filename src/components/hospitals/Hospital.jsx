@@ -2,7 +2,7 @@ import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useGetTopHospitalsQuery } from '../../components/api/apiSlice';
 import { Dna } from 'react-loader-spinner';
-import Appointment from '../services/appointment_from/Appointment';
+import MainAppointment from '../main_appointment_form/MainAppointment';
 
 import './Hospitals.css';
 
@@ -84,7 +84,7 @@ const Hospital = () => {
           </button>
         )}
       </div>
-      <Appointment modalRef={modalRef} handleCloseModal={handleCloseModal} />
+      <MainAppointment handleCloseModal={handleCloseModal} modalRef={modalRef} />
     </>
   );
 };

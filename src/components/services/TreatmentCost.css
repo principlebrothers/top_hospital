@@ -65,10 +65,6 @@
   transition: all 0.3s ease-in-out;
 }
 
-/* .estimate__submit__button button:hover {
-  transform: scale(1.1);
-} */
-
 .treatment__levels {
   align-self: center;
   gap: 3rem;

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MdOutlineSpeakerPhone } from 'react-icons/md';
 import PropTypes from 'prop-types';
@@ -8,6 +9,18 @@ import './MobileMenu.css';
 import 'animate.css';
 
 const MobileMenu = ({ handleCloseModal, modalRef }) => {
+  const [showPatientServiceDropdown, setShowPatientServiceDropdown] =
+    useState(false);
+  const [showMedicalServiceDropdown, setShowMedicalServiceDropdown] =
+    useState(false);
+
+  const togglePatientServicesDropdown = () => {
+    setShowPatientServiceDropdown(!showPatientServiceDropdown);
+  };
+
+  const toggleMedicalServicesDropdown = () => {
+    setShowMedicalServiceDropdown(!showMedicalServiceDropdown);
+  };
   return (
     <dialog
       ref={modalRef}
@@ -25,24 +38,39 @@ const MobileMenu = ({ handleCloseModal, modalRef }) => {
               About Top Hospitals
             </Link>
           </div>
-          <div role='group'>
-            <Link to='/patient-services' onClick={handleCloseModal}>
+          <div role='group' className={`mobile__btn__links__container`}>
+            <button type='button' onClick={togglePatientServicesDropdown}>
               Patient Services
-            </Link>
+            </button>
+            {showPatientServiceDropdown ? (
+              <div>
+                <Link to='patient-services' onClick={handleCloseModal}>
+                  Hotels near the top hospitals
+                </Link>
+                <Link to='patient-services' onClick={handleCloseModal}>Medical Coordination Office</Link>
+                <Link to='patient-services' onClick={handleCloseModal}>Patients Privilege</Link>
+                <Link to='patient-services' onClick={handleCloseModal}>Payment Options</Link>
+                <Link to='patient-services' onClick={handleCloseModal}>
+                  Tele-consultation with a doctor
+                </Link>
+              </div>
+            ) : null}
           </div>
-          <div role='group'>
-            <Link to='/medical-travel' onClick={handleCloseModal}>
+          <div role='group' className={`mobile__btn__links__container`}>
+            <button type='button' onClick={toggleMedicalServicesDropdown}>
               Medical Travel
-            </Link>
+            </button>
+            {showMedicalServiceDropdown ? (
+              <div>
+                <Link to='medical-travel' onClick={handleCloseModal}>Medical Coordination Office</Link>
+                <Link to='medical-travel' onClick={handleCloseModal}>Medical Travel Guides</Link>
+                <Link to='medical-travel' onClick={handleCloseModal}>Medication Tourism</Link>
+              </div>
+            ) : null}
           </div>
           <div role='group'>
             <Link to='/packages' onClick={handleCloseModal}>
               Packages
-            </Link>
-          </div>
-          <div role='group'>
-            <Link to='/contact' onClick={handleCloseModal}>
-              Contact Us
             </Link>
           </div>
           <div role='group'>
@@ -53,9 +81,9 @@ const MobileMenu = ({ handleCloseModal, modalRef }) => {
           </div>
         </Slide>
         <Zoom>
-        <figure className='amtc__logo__mobile'>
-          <img src={amtcLogo} alt='amtc' />
-          <figcaption>Powered by Africa Medical Tourism Council</figcaption>
+          <figure className='amtc__logo__mobile'>
+            <img src={amtcLogo} alt='amtc' />
+            <figcaption>Powered by Africa Medical Tourism Council</figcaption>
           </figure>
         </Zoom>
         <div role='group' className='closed__btn__container'>

@@ -1,11 +1,10 @@
-.contact__us {
+.post__treatment__container {
   display: flex;
-  align-items: center;
   justify-content: center;
   min-height: 100vh;
 }
 
-.contact__us p {
+.post__treatment__container h1 {
   color: var(--primary-green);
   font-size: 2rem;
   font-weight: 700;

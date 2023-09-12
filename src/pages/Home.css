@@ -53,9 +53,8 @@
 .call__us__btn {
   background-color: var(--primary-green);
   color: var(--primary-white);
-  padding: 10px 44px;
-  font-size: 20px;
-  margin-bottom: 3rem;
+  padding: 20px 36px;
+  font-size: 25px;
   border: 1px solid var(--primary-white);
   border-radius: 8px;
   transition: all 0.3s ease-in-out;

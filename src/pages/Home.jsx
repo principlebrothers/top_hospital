@@ -1,4 +1,6 @@
+import { useState, useEffect } from 'react';
 import { homeSlider } from '../utils/Utils';
+import { shuffle } from '../utils/Utils';
 import Hospital from '../components/hospitals/Hospital';
 import Services from '../components/services/Services';
 import QuickNavigation from '../components/quick_navigation/QuickNavigation';
@@ -10,6 +12,15 @@ import './Home.css';
 import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
 
 const Home = () => {
+  const [shuffledHospital, setShuffledHospital] = useState(homeSlider);
+
+  const handleShuffle = () => {
+    setShuffledHospital(shuffle(homeSlider));
+  };
+
+  useEffect(() => {
+    handleShuffle();
+  }, [])
 
   return (
     <section className='home__container'>
@@ -23,7 +34,7 @@ const Home = () => {
           modules={[Navigation, Pagination, Mousewheel, Keyboard]}
           className='mySwiper'
         >
-          {homeSlider.map((item) => {
+          {shuffledHospital.map((item) => {
             const { id, title, info, image } = item;
             return (
               <SwiperSlide key={id}>
@@ -33,7 +44,7 @@ const Home = () => {
                     <p>{info}</p>
                     <button type='button' className='call__us__btn'>
                       <a href='tel: +233308040040'>
-                        <span>Call +233308040040</span>
+                        <span>Call +233 308 040 040</span>
                       </a>
                     </button>
                   </div>
@@ -55,7 +66,6 @@ const Home = () => {
       <section className='hospitals'>
         <Hospital />
       </section>
-
     </section>
   );
 };
